@@ -2,14 +2,14 @@
 ## necessary unity object
 1. camera 
 
-![camera](screenshot_varjo/camera.png)
+![camera](../screenshot_varjo/camera.png)
 
-![main camera](screenshot_varjo/main_camera.png) ![preview camera](screenshot_varjo/previewCamera.png)
+![main camera](../screenshot_varjo/main_camera.png) ![preview camera](../screenshot_varjo/previewCamera.png)
 
 
 2. Directional Light
 
-![camera](screenshot_varjo/light.png)
+![camera](../screenshot_varjo/light.png)
 
 
 
@@ -18,7 +18,7 @@
 
 these two image are used for visualization. 
 
-![alt text](./screenshot_varjo/img.png)
+![alt text](../screenshot_varjo/img.png)
 
 2. VarjoApiManager
 
@@ -28,7 +28,7 @@ these two image are used for visualization.
         2) Drug VarjoApiManager.cs into inspector.
         3) Drug two camera image into Left Img and Right Img.
 
-![alt text](./screenshot_varjo/varjoapimanager.png)
+![alt text](../screenshot_varjo/varjoapimanager.png)
 
 3. Sender 
 
@@ -50,7 +50,7 @@ these two image are used for visualization.
         2) Drug Sender.cs into inspector.
         3) Drag VarjoApiManager into frame source.
 
-   ![alt text](./screenshot_varjo/sender.png)
+   ![alt text](../screenshot_varjo/sender.png)
 
 4. Receiver
 
@@ -70,7 +70,7 @@ these two image are used for visualization.
 
         INTRODUCTION: It is an example that do the calibration at the beginning , then detect objects in real time and show the 3d bboxes in varjo world. 
 
-![alt text](./screenshot_varjo/calibra_exam.png)
+![alt text](../screenshot_varjo/calibra_exam.png)
 
         1) Please create empty object.
         2) Drug calibration_example.cs into inspector.
@@ -83,7 +83,7 @@ these two image are used for visualization.
         INTRODUCTION: It allows you to show and update tooltips(text tooltip) attached to game objects in the scene. Tooltips can be styled with custom text, size, font size, font color, and background color.
         1) Please create empty object.
         2) Drug TooltipManager.cs into inspector.
-        3) Drug ObjectTooltipCanvas in Tooltips folder ![alt text](./screenshot_varjo/profrab_tips.png) into tooltop prefab. 
+        3) Drug ObjectTooltipCanvas in Tooltips folder ![alt text](../screenshot_varjo/profrab_tips.png) into tooltop prefab. 
 2. text_example 
         INTRODUCTION: Present Single Text tooltip in front of camera.
         1) Please create empty object.
@@ -94,11 +94,11 @@ INTRODUCTION: it controls the progress bar at runtime by generating a segmented 
 1) Please create empty object.
 2) Drug ProgressBarManager.cs into inspector.
 3) In Prefabs folder, there are two prefabs:
-![alt text](./screenshot_varjo/prefabs.png)
+![alt text](../screenshot_varjo/prefabs.png)
 Please drag them into prefab setup.
 4) please drag TooltipManager into refs. And XRcamera is main camera.
 
-![alt text](./screenshot_varjo/progressbar.png)
+![alt text](../screenshot_varjo/progressbar.png)
 
 
 
