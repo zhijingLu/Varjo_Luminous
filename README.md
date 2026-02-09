@@ -35,7 +35,7 @@
         
         opencv-contrib: 4.8.0
 ## Add DLL
-1. Please follow the  [c++ readme](c++/README.md) to compile a VarjoStream.dll file
+1. Please follow the  [c++ readme](StreamDLL/README.md) to compile a VarjoStream.dll file
 2. Please find the OpenCV-4.8.0 dll.
 3. Add dll files into Assert folder.
    
