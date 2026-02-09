@@ -35,7 +35,6 @@ cl /nologo /EHsc /MD /std:c++17 /LD ^
   /I"%V02_DIR%" ^
   /I"%OPENCV_EDIT_DIR%" ^
   /I"%VARJO_INC%" ^
-  /I"%VARJO_INC_EXP%" ^
   /I"%OPENCV_INC%" ^
   !SRCS! ^
   /link ^
