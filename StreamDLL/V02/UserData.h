@@ -1,7 +1,11 @@
 #pragma once
-
 #include "Varjo.h"
 #include "Varjo_datastream.h"
+#include "Varjo_mr_experimental.h"
+
+
+#include <vector>
+#include <iostream>
 #include <thread>
 
 struct UserData {
@@ -42,6 +46,21 @@ struct UserData {
         {0, outputSizeHeight / 1.6f, outputSizeHeight / 2.0f},
         {0, 0, 1}
     };
+    //TODO ZHIJING LU
+    float* pc_vertices = nullptr;
+    float* pc_normals = nullptr;
+    int* pc_colors = nullptr;
+    int* pc_idx = nullptr;
+
+    uint32_t pc_vertices_size = 0;
+    uint32_t pc_idx_size = 0;
+    int pc_curChunkIndex = 0;
+    int pc_chunkCount = 0;
+    int64_t pc_lastChunkUpdateTime = 0;
+
+    std::vector<varjo_MeshChunkDescription> pc_chunkDescriptions;
+    varjo_MeshReconstructionConfig mr_conf{};
+    varjo_ReconstructionConfig pc_conf{};
 
     UserData() {
         m_session = nullptr;
@@ -68,7 +87,19 @@ struct UserData {
         intrinsics_undistorted[1] = knew[1][2] / outputSizeHeight;
         intrinsics_undistorted[2] = knew[0][0] / outputSizeWidth;
         intrinsics_undistorted[3] = knew[1][1] / outputSizeHeight;
-        intrinsics_undistorted[4] = intrinsics_undistorted[5] = intrinsics_undistorted[6] = intrinsics_undistorted[7] = intrinsics_undistorted[8] = intrinsics_undistorted[9] = 0;
+        for (int i = 4; i < 10; ++i)
+            intrinsics_undistorted[i] = 0;
+        //TODO ZHIJING LU
+        pc_vertices = nullptr;
+        pc_normals = nullptr;
+        pc_colors = nullptr;
+        pc_idx = nullptr;
+        pc_vertices_size = 0;
+        pc_idx_size = 0;
+        pc_curChunkIndex = 0;
+        pc_chunkCount = 0;
+        pc_lastChunkUpdateTime = 0;
+
     }
 
     ~UserData() {
@@ -81,7 +112,19 @@ struct UserData {
         delete[] extrinsics_r;
         delete[] intrinsics_r;
         delete[] intrinsics_undistorted;
+        //TODO ZHIJING LU
+        delete[] left;
+        delete[] right;
+        delete[] RopeData;
+        delete[] pc_vertices;
+        delete[] pc_normals;
+        delete[] pc_colors;
+        delete[] pc_idx;
     }
 };
 
-extern UserData myData;
+#ifdef BUILDING_DLL
+__declspec(dllexport) extern UserData myData;
+#else
+__declspec(dllimport) extern UserData myData;
+#endif
