@@ -16,12 +16,11 @@ set "OPENCV_LINK_LIBS=opencv_core480.lib opencv_imgproc480.lib opencv_imgcodecs4
 
 
 
-REM ====== get all v02  cpp + opencv_edit\opencv.cpp ======
+REM ====== get all v02  cpp ======
 set SRCS=
 for /r "%V02_DIR%" %%f in (*.cpp) do (
   set SRCS=!SRCS! "%%f"
 )
-set SRCS=!SRCS! "%OPENCV_EDIT_DIR%\opencv.cpp"
 
 set OUT_DIR=%cd%\build
 if not exist "%OUT_DIR%" mkdir "%OUT_DIR%"
