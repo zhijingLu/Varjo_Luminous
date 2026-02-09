@@ -15,8 +15,8 @@ This folder is used for making a dll.
 
 ## Compile
 1. please open x64 Native Tools Command Prompt for VS.
-2. open build_dll.bat and change the path in setting area.
-3. run :
+2. open build_dll.bat and change the path in setting area. (if varjo sdk is experimental, please also change the pathname)
+4. run :
 ```
  build_dll.bat
 ```
