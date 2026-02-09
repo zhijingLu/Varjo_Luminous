@@ -123,8 +123,15 @@ struct UserData {
     }
 };
 
-#ifdef BUILDING_DLL
-__declspec(dllexport) extern UserData myData;
+
+#ifdef _WIN32
+  #ifdef VARJOSTREAM_EXPORTS
+    #define USERDATA_API __declspec(dllexport)
+  #else
+    #define USERDATA_API __declspec(dllimport)
+  #endif
 #else
-__declspec(dllimport) extern UserData myData;
+  #define USERDATA_API
 #endif
+
+extern USERDATA_API UserData myData;
