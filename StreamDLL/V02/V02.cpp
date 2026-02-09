@@ -13,7 +13,7 @@
 
 #define DEBUGOUT false
 //#define CAPTURE_MESH        // whether to activate mesh capture
-#define CAPTURE_POINTCLOUD// whether to activate pointcloud capture
+//#define CAPTURE_POINTCLOUD// whether to activate pointcloud capture
 #define UNDISTORT             // whether to undistort the original raw images
 
 #if defined(UNDISTORT)
