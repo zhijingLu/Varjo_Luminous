@@ -32,6 +32,7 @@ echo [INFO] Sources: !SRCS!
 
 REM ====== compile ======
 cl /nologo /EHsc /MD /std:c++17 /LD ^
+  /D VARJOSTREAM_EXPORTS ^
   /I"%V02_DIR%" ^
   /I"%OPENCV_EDIT_DIR%" ^
   /I"%VARJO_INC%" ^
