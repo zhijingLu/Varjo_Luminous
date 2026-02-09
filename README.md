@@ -35,9 +35,8 @@
         
         opencv-contrib: 4.8.0
 ## Add DLL
-1. Please follow the  [c++ readme](StreamDLL/README.md) to compile a VarjoStream.dll file
-2. Please find the OpenCV-4.8.0 dll.
-3. Add dll files into Assert folder.
+1. Please follow the  [c++ readme](StreamDLL/README.md) to compile a VarjoStream.dll file(Or unzip the dll.zip in DLL folder)
+2. Add dll files into Assert folder.
    
 ## problem 
     1. if we meet the problem that when we run the text_example, the text is not shown in front of camera, not rotate with camera, or direction of text is not facing the camera directly, please 
