@@ -3,10 +3,14 @@
 #ifndef _V02_H_
 #define _V02_H_
 
-#ifdef DLL_EXPORT
-#   define EXPORT __declspec(dllexport)
+#ifdef _WIN32
+  #ifdef VARJOSTREAM_EXPORTS
+    #define EXPORT __declspec(dllexport)
+  #else
+    #define EXPORT __declspec(dllimport)
+  #endif
 #else
-#   define EXPORT __declspec(dllimport)
+  #define EXPORT
 #endif
 
 extern "C" EXPORT void StartStreaming();
