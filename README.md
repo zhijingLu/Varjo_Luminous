@@ -59,7 +59,7 @@ There are three function you can use.
 2) Text tooltip presentation.
 3) progressBar.
 
-Please follow the [README2](./readme2.md)
+Please follow the [README2](Luminous-main/readme2.md)
 
     
 <!--
