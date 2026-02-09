@@ -83,7 +83,6 @@ MonoBleedingEdge/*
 *.dll
 *.zip
 *.lib
-*.png
 *.sln
 TTS
 Assets/Videos/*.mp4
