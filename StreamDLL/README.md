@@ -10,7 +10,7 @@ If you want to directly get the dll, please download the zip file in DLL folder 
 
    **!!  Here is a problem. experimental is not suggested to use. Now it is used in pointcloud.cpp**
    
-   **!!  If just use V02 without any pointcloud info, please use the varjo native sdk in link.**
+   **!!  If just use V02 without any pointcloud info, please use the varjo native sdk in link and change .**
    
 1. Please download the opencv 4.8.0 from [opencv github](https://github.com/opencv/opencv/releases/tag/4.8.0) and opencv-contrib 4.8.0 from [contrib github](https://github.com/opencv/opencv_contrib/tree/4.8.0)  and compile as lib and dll.
 
