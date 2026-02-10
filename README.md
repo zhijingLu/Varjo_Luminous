@@ -31,7 +31,25 @@
 
         Link : Getting Started with Varjo XR Plugin for Unity | Varjo for developers
 
-        opencv version:4.8.0
+     6. Install ultraLeap
+
+     open Unity: Edit → Project Settings… → Package Manager, find Scoped Registries
+     
+        * Name：Ultraleap
+
+        * URL：https://package.openupm.com
+
+        * Scope(s)：com.ultraleap
+     
+     save and close Project Settings
+
+     Then, open  Window → Package Manager
+
+    In the top left corner, select the Package source dropdown menu and choose My Registry.
+    
+     Find Ultraleap Tracking in the list. Install the version of 6.6.0
+     
+     7. opencv version:4.8.0
         
         opencv-contrib: 4.8.0
 ## Add DLL
