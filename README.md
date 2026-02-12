@@ -1,4 +1,5 @@
 # Varjo Project
+
 ## install
     1. Install Unity Hub : https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe
 
@@ -73,7 +74,11 @@
 ## Usage
 There are three function you can use.
 1) Clibration and object detection. max fps to server:32.9fps
+
+   python server github: https://github.com/AlooTikkiii/Stream.git
+   
    video: https://drive.google.com/file/d/14WYvkgcG9sKmj1vQ5Lky_rgfn5jn1aza/view?usp=drive_link
+   
 3) Text tooltip presentation.
 4) progressBar.
 
