@@ -146,7 +146,7 @@ public class calibration_example : MonoBehaviour
 
         // Convert packet -> corner pairs in image coordinates
         List<(int id, Corner2DInfo left, Corner2DInfo right)> pairs =
-            ToCorner2DList(pkt, imgH: varjoApiManager.cameraLeft.width, imgW: varjoApiManager.cameraLeft.height);
+            ToCorner2DList(pkt, imgH: varjoApiManager.cameraLeft.width, imgW: varjoApiManager.cameraLeft.height, pkt_img_w: 640, pkt_img_h: 640);
 
         // Triangulate 3D quads
         bool ok3d = calibration.Compute3D_TriGD(
