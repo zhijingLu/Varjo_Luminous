@@ -1102,14 +1102,13 @@ namespace DFKI_Utilities
         /// This method performs allocation and is intended for conversion
         /// or debugging pipelines rather than tight per-frame hot paths.
         /// </remarks>
-        public static List<(int id, Corner2DInfo left, Corner2DInfo right)> ToCorner2DList(DetectionReceiver.PairPacket pkt, int imgH, int imgW)
+        public static List<(int id, Corner2DInfo left, Corner2DInfo right)> ToCorner2DList(DetectionReceiver.PairPacket pkt, int imgH, int imgW, int pkt_img_w=640,int pkt_img_h=640)
         {
             int n = (pkt?.items != null) ? pkt.items.Length : 0;
             var result = new List<(int, Corner2DInfo, Corner2DInfo)>(n);
-            int detw = 224;
-            int deth = 224;
-            var scaleX = (float)imgW / detw;
-            var scaleY = (float)imgH / deth;
+            
+            var scaleX = (float)imgW / pkt_img_w;
+            var scaleY = (float)imgH / pkt_img_h;
 
             for (int i = 0; i < n; i++)
             {
